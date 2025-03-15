@@ -4,3 +4,15 @@
 # .env.*.local
 
 # /env/
+
+# Ignore build directory
+/build
+
+# Ignore node_modules
+*/node_modules
+
+# Ignore coverage directory
+/coverage
+
+# Ignore .DS_Store (for macOS users)
+/.DS_Store

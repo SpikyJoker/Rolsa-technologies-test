@@ -1,0 +1,7 @@
+fastapi 
+uvicorn 
+pydantic 
+sqlalchemy
+PyJWT 
+base64
+python-multipart
