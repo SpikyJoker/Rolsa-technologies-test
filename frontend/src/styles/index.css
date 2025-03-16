@@ -1,0 +1,18 @@
+@import "tailwindcss";
+:root {
+  --color-primary-viridian: rgba(0, 128, 128, 1);
+  --color-primary-mint: rgba(170, 255, 195, 1);
+  --color-secondary-darkcyan: 0 139 139 1;
+  --color-charcoal: 54 69 79 1;
+  --mui-palette-primary-main: var(--color-primary-viridian);
+  --mui-palette-primary-light: var(--color-primary-viridian);
+  --mui-palette-primary-dark: #1565c0;
+  --mui-palette-primary-contrastText: #fff;
+}
+
+@theme {
+  --color-viridian: var(--color-primary-viridian);
+  --color-mint: var(--color-primary-mint);
+  --color-darkcyan: var(--color-secondary-darkcyan);
+  --color-charcoal: var(--color-charcoal);
+}

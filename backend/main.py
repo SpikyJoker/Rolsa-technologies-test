@@ -15,7 +15,7 @@ app = FastAPI()
 print("Starting FastAPI application...")
 
 origins = [
-    "http://localhost:3000",  # React frontend URL
+    "http://localhost:5173",  # React frontend URL
 ]
 
 app.add_middleware(
