@@ -42,7 +42,7 @@ const Register = () => {
   return (
     <Container>
       <Card className="p-4">
-        <Typography variant="h4" className="mb-4">Register</Typography>
+        <Typography variant="h2" className="my-4 text-center w-full">Register</Typography>
         {error && (
           <Typography variant="p" className="text-red-500 mb-4">
             {error}
