@@ -1,7 +1,10 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Input, Button, Card, Typography } from '@shadcn/ui';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Typography } from '@/components/ui/typography';
 
 const Login = () => {
   const [username, setUsername] = useState<string>('');
@@ -26,7 +29,7 @@ const Login = () => {
       <Card>
         <Typography variant="h4" className="mb-4">Login</Typography>
         {loginError && (
-          <Typography variant="body2" className="text-red-500 mb-4">
+          <Typography variant="p" className="text-red-500 mb-4">
             {loginError}
           </Typography>
         )}

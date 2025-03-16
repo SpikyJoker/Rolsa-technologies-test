@@ -1,7 +1,12 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Input, Button, Card, Typography } from '@shadcn/ui';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Typography } from '@/components/ui/typography';
+import { Container } from '@/components/ui/container';
+
 
 interface RegisterError {
   detail?: string;
@@ -35,11 +40,11 @@ const Register = () => {
   };
 
   return (
-    <div className="max-w-xs mx-auto">
-      <Card>
+    <Container>
+      <Card className="p-4">
         <Typography variant="h4" className="mb-4">Register</Typography>
         {error && (
-          <Typography variant="body2" className="text-red-500 mb-4">
+          <Typography variant="p" className="text-red-500 mb-4">
             {error}
           </Typography>
         )}
@@ -62,20 +67,22 @@ const Register = () => {
           />
           <Button 
             type="submit" 
-            className="w-full p-2 bg-blue-500 text-white rounded mt-2"
+            className="w-full p-2 text-white rounded mt-2"
+            variant={'default'}
           >
             Register
           </Button>
           <Button 
             type="button" 
             onClick={() => navigate('/login')} 
-            className="w-full p-2 text-blue-500 mt-1"
+            className="w-full p-2 mt-1"
+            variant={'outline'}
           >
             Already have an account? Login
           </Button>
         </form>
       </Card>
-    </div>
+    </Container>
   );
 };
 

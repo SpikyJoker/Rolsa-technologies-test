@@ -2,7 +2,9 @@ import { useState, useEffect, ChangeEvent } from 'react';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { Button, Card, Typography } from '@shadcn/ui';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Typography } from '@/components/ui/typography';
 
 interface Pdf {
   pdf_id: string;
@@ -86,7 +88,7 @@ const Dashboard = () => {
     <div className="max-w-7xl mx-auto mt-4 mb-4">
       <Card className="p-3 mb-4 bg-gradient-to-r from-gray-700 to-gray-800 text-white">
         <div className="flex justify-between items-center">
-          <Typography variant="h4" className="font-semibold">Welcome, {user}</Typography>
+          <Typography variant="h4" className="font-semibold text-white">Welcome, {user}</Typography>
           <Button 
             className="bg-red-500 text-white font-bold"
             onClick={handleLogout}
@@ -125,7 +127,7 @@ const Dashboard = () => {
               <svg className="w-16 h-16 text-gray-400 mb-2" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
               </svg>
-              <Typography variant="body2" className="text-gray-500">No PDFs available</Typography>
+              <Typography variant="p" className="text-gray-500">No PDFs available</Typography>
             </div>
           ) : (
             <ul className="max-h-96 overflow-auto">
@@ -141,7 +143,7 @@ const Dashboard = () => {
                     <svg className="w-6 h-6 text-red-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                     </svg>
-                    <Typography variant="body2" className="truncate">{pdf.filename}</Typography>
+                    <Typography variant="p" className="truncate">{pdf.filename}</Typography>
                   </Button>
                 </li>
               ))}
@@ -169,7 +171,7 @@ const Dashboard = () => {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
               </svg>
               <Typography variant="h6">Select a PDF to view</Typography>
-              <Typography variant="body2" className="mt-1">Click on a document from the list to display it here</Typography>
+              <Typography variant="p" className="mt-1">Click on a document from the list to display it here</Typography>
             </div>
           )}
         </Card>
